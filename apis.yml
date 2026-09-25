@@ -1,23 +1,60 @@
 aid: ande
+
 name: ANDE
-description: 'ANDE is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'ANDE Rapid DNA is the global leader in Rapid DNA technology, empowering agencies worldwide to provide fast, accurate DNA identification. FBI NDIS approved, it is used for disaster victim identification, criminal forensic investigations, booking, sexual assault, border security, counterterrorism, government services, and environmental protection. The company offers rapid DNA profiling solutions for public safety, investigations, and energy/environmental protection, delivering results in less than two hours.'
+
 url: https://raw.githubusercontent.com/api-evangelist/ande/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-24'
+
 modified: '2026-09-24'
+
 tags:
 - Company
-apis: []
+- DNA
+- Rapid-Identification
+- Public-Safety
+- Biotechnology
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/ande-hosts.yml
+- type: Vendors
+  url: vendors/ande-vendors.yml
+- type: DomainSecurity
+  url: security/ande-domain-security.yml
 - type: Website
   url: https://forgeglobal.com/ande_stock/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: ANDE provides DNA technology products and does not expose a software API.
+  evidence:
+    - url: https://www.ande.com
+      status: 200
+  checked: 2026-09-24
+x-enrichment:
+  date: '2026-09-24'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
